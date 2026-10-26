@@ -108,3 +108,8 @@ The executed [signaling-context notebook](notebooks/signaling_context_comparison
 This directory is the local Terputer package for the terpene exposure transcriptomics study. It contains the source matrices and manifests needed by the included notebooks; no local virtual environment is included. From this directory, create the environment with `python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt`, then launch `jupyter lab notebooks/terpene_exposure_pilot.ipynb`. The executed notebook provides the GSE136998 descriptive pilot. `signaling_context_comparison.ipynb` is a separate processed genetic Perturb-seq context illustration. Neither supports a cross-study terpene replication claim.
 
 File hashes and provenance are listed in [`data/manifest.tsv`](data/manifest.tsv).
+
+
+## Terpedia access
+
+The optional client in `src/terpedia_access.py` calls the Terpedia Knowledge API at `/v1/tabular/search`. It reads `TERPEDIA_KNOWLEDGE_API_KEY` and `TERPEDIA_KB_API_URL` from the process environment and sends the key in the `x-knowledge-key` header. Copy `.env.example` as a configuration reference, then provide the real key through a local secret manager, Codespaces secret, or authorized GitHub Actions secret. Never commit `.env` or print the key in notebook output.
