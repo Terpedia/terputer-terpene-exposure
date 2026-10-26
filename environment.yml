@@ -1,0 +1,14 @@
+name: terputer-terpene-exposure
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - ipykernel
+  - pandas
+  - numpy
+  - matplotlib
+  - pyarrow
+  - scipy
+  - nbformat
+  - nbclient
